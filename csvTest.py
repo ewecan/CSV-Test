@@ -26,10 +26,10 @@ print('labels ' , labels.shape)
 print("samples " , samples.shape)
 
 for sample_id, sample in enumerate(recordings):
-            labels[sample_id][possible_labels.index(sample[0])] = True
-            for channel in range(num_channels):
-                start = 1 + channel * window_size
-                end = 1 + (channel + 1) * window_size
-                samples[sample_id][channel] = sample[start:end]
+    labels[sample_id][possible_labels.index(sample[0])] = True
+    for channel in range(num_channels):
+        start = 1 + channel * window_size
+        end = 1 + (channel + 1) * window_size
+        samples[sample_id][channel] = sample[start:end]
 
 print("samples\n " , samples)
