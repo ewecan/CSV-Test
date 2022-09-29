@@ -32,4 +32,7 @@ for sample_id, sample in enumerate(recordings):
         end = 1 + (channel + 1) * window_size
         samples[sample_id][channel] = sample[start:end]
 
+# samples=np.reshape(samples, (len(recordings)*num_channels* window_size))
+
+samples=np.reshape(samples,(-1,90,3,1))
 print("samples\n " , samples)
